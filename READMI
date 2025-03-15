@@ -1,0 +1,31 @@
+# CyberDefenders.org - Lespion Lab Walkthrough
+
+INTRO:
+
+L'Espion, a challenge hosted on CyberDefenders.org, presents investigators with a scenario involving potential corporate espionage. The challenge tasks participants with analyzing digital evidence from a suspect's device and using OSINT techniques to uncover connections, activities, and potential data exfiltration.
+
+TOOLS USED:
+
+- SHERLOCK (https://github.com/sherlock-project/sherlock): powerful OSINT software that gathers usernames from all the popular social media platforms, forums, etc. 
+- GOOGLE MAPS
+- GOOGLE IMAGE SEARCH 
+
+SCENARIO:
+
+You have been tasked by a client whose network was compromised and brought offline to investigate the incident and determine the attacker's identity.
+
+Incident responders and digital forensic investigators are currently on the scene and have conducted a preliminary investigation. Their findings show that the attack originated from a single user account, probably, an insider. Investigate the incident, find the insider, and uncover the attack actions.
+
+WALKTHROUGH:
+
+Q1) File -> Github.txt: What API key did the insider add to his GitHub repositories?
+
+To investigate the insider activity, we begin by analyzing the user's GitHub repository. The GitHub profile in question belongs to the user EMarseille99, who is described as a backend programmer for a software consulting company. Among the repositories there is one which is particularly striking as is project written in Javascript and publicly accessible which raises concerns about its contents.
+Analysing the repo we can see the file "Login Page.js" and upon opening it we can find all the details for the API key.
+
+
+
+That's a case of HARDCODED API KEYS, which refer to sensitive authentication credentials that are directly embedded within the source code of an application, making them easily accessible to anyone who gains access to the source code.
+
+
+Q2) File -> Github.txt: What is the plaintext password the insider added to his GitHub repositories?
